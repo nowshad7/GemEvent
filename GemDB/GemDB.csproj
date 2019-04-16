@@ -98,6 +98,7 @@
     </EntityDeploy>
     <None Include="GemModel.edmx.diagram">
       <DependentUpon>GemModel.edmx</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

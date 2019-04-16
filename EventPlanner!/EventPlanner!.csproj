@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -126,13 +134,97 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Client.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Clients.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EventOrdersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\igmsController.cs" />
+    <Compile Include="Director.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventManager.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventOrder.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Gallery.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="igm.cs">
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model4.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientM.cs" />
+    <Compile Include="Models\MemberShip.cs" />
+    <Compile Include="OrderEvent.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizeEvent.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Photographer.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TestModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Vanue.cs">
+      <DependentUpon>TestModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\asset\b.jpg" />
     <Content Include="Content\asset\bd.jpg" />
     <Content Include="Content\asset\c1.jpg" />
     <Content Include="Content\asset\c2.jpg" />
@@ -144,14 +236,18 @@
     <Content Include="Content\asset\icon2.png" />
     <Content Include="Content\asset\icon3.png" />
     <Content Include="Content\asset\leaf.png" />
+    <Content Include="Content\asset\login.gif" />
     <Content Include="Content\asset\lover.jpg" />
     <Content Include="Content\asset\p2.jpg" />
     <Content Include="Content\asset\pr.jpg" />
     <Content Include="Content\asset\pri.jpg" />
     <Content Include="Content\asset\proposal1.jpg" />
+    <Content Include="Content\asset\r1.jpg" />
+    <Content Include="Content\asset\r2.jpg" />
     <Content Include="Content\asset\re.jpg" />
     <Content Include="Content\asset\ser.jpg" />
     <Content Include="Content\asset\service.jpg" />
+    <Content Include="Content\asset\t1.jpg" />
     <Content Include="Content\asset\test0003.jpg" />
     <Content Include="Content\asset\test001.jpg" />
     <Content Include="Content\asset\test002.jpg" />
@@ -363,14 +459,57 @@
     <Content Include="Content\bootstrap\_layouts\redirect.html" />
     <Content Include="Content\bootstrap\_layouts\simple.html" />
     <Content Include="Content\CSS\about.css" />
+    <Content Include="Content\CSS\aos-animation.css" />
+    <Content Include="Content\CSS\aos.css" />
+    <Content Include="Content\CSS\banner-style.css" />
+    <Content Include="Content\CSS\bootstrap.css" />
     <Content Include="Content\CSS\contact.css" />
+    <Content Include="Content\CSS\fontawesome-all.css" />
     <Content Include="Content\CSS\gallery.css" />
+    <Content Include="Content\CSS\lightbox.css" />
+    <Content Include="Content\CSS\login.css" />
+    <Content Include="Content\CSS\popuo-box.css" />
     <Content Include="Content\CSS\service.css" />
     <Content Include="Content\CSS\style.css" />
+    <Content Include="Content\images\b2.jpg" />
+    <Content Include="Content\images\e-mail.png" />
+    <Content Include="Content\images\password.png" />
+    <Content Include="Content\images\tick.png" />
+    <Content Include="Content\images\user.png" />
+    <Content Include="Content\js\aos.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\easing.js" />
+    <Content Include="Content\js\jquery-2.2.3.min.js" />
+    <Content Include="Content\js\jquery.countup.js" />
+    <Content Include="Content\js\lightbox-plus-jquery.min.js" />
+    <Content Include="Content\js\move-top.js" />
+    <Content Include="Content\webfonts\fa-brands-400.svg" />
+    <Content Include="Content\webfonts\fa-regular-400.svg" />
+    <Content Include="Content\webfonts\fa-solid-900.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model4.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model4.edmx</DependentUpon>
+      <LastGenOutput>Model4.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model4.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model4.edmx</DependentUpon>
+      <LastGenOutput>Model4.cs</LastGenOutput>
+    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\bootstrap\.editorconfig" />
@@ -617,6 +756,32 @@
     <Content Include="Content\bootstrap\_includes\callout-danger-async-methods.md" />
     <Content Include="Content\bootstrap\_includes\callout-info-mediaqueries-breakpoints.md" />
     <Content Include="Content\bootstrap\_includes\callout-warning-color-assistive-technologies.md" />
+    <Content Include="Content\webfonts\fa-brands-400.eot" />
+    <Content Include="Content\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\webfonts\fa-regular-400.eot" />
+    <Content Include="Content\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\webfonts\fa-solid-900.eot" />
+    <Content Include="Content\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\webfonts\fa-solid-900.woff2" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <EntityDeploy Include="Model4.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model4.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model4.edmx.diagram">
+      <DependentUpon>Model4.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -628,6 +793,16 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="TestModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TestModel.Context.cs</LastGenOutput>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="TestModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>TestModel.edmx</DependentUpon>
+      <LastGenOutput>TestModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -640,14 +815,27 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Service.cshtml" />
-    <Content Include="Views\Home\ClientRegister.cshtml" />
+    <EntityDeploy Include="TestModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>TestModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="TestModel.edmx.diagram">
+      <DependentUpon>TestModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Views\EventOrders\Create.cshtml" />
+    <Content Include="Views\EventOrders\Delete.cshtml" />
+    <Content Include="Views\EventOrders\Details.cshtml" />
+    <Content Include="Views\EventOrders\Edit.cshtml" />
+    <Content Include="Views\EventOrders\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
+    <Content Include="Views\igms\Index.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -658,19 +846,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\GemDB\GemDB.csproj">
-      <Project>{38fd1bdc-e71a-418b-a21f-ae051df9ba28}</Project>
-      <Name>GemDB</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\GemEvent.Models\GemEvent.Models.csproj">
-      <Project>{08c29268-f18e-4f69-bb14-86812ab5f9e3}</Project>
-      <Name>GemEvent.Models</Name>
-    </ProjectReference>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using GemEvent.Models;
-using GemDB.DBFunctions;
+using EventPlanner_.Models;
+using EventPlanner_.Controllers;
+using EventPlanner_;
+
 
 namespace EventPlanner_.Controllers
 {
-	
+
 	public class HomeController : Controller
 	{
 		Client client = null;
+
 
 		public HomeController()
 		{
@@ -30,12 +33,6 @@ namespace EventPlanner_.Controllers
 			return View();
 		}
 
-		public ActionResult Contact()
-		{
-			ViewBag.Message = "contact page.";
-
-			return View();
-		}
 
 		public ActionResult Service()
 		{
@@ -50,23 +47,26 @@ namespace EventPlanner_.Controllers
 			return View();
 		}
 
-		[HttpPost]
+		
 
-		public ActionResult ClientRegister(ClientModel model)
+
+
+		public ActionResult Contact()
 		{
-			if(ModelState.IsValid)
-			{
-				int ID = client.Register(model);
-				if (ID > 0)
-				{
-					ModelState.Clear();
-					ViewBag.Issuccess = "Successfully Registered!!";
-				}
-				else ViewBag.Issuccess = "Fail!!";
-			}
 
 			return View();
 		}
 
+
+
+
+
+
+
+
+
+		
+			
+		}
+
 	}
-}

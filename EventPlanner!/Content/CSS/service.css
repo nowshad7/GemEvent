@@ -6,6 +6,10 @@ footer{
 	text-align:center;
 	font-size:11px;
 }
+.t {
+	padding: 5%
+
+}
 .follow{
 	  color: #fff;
       font-family: "Poppins";
@@ -81,18 +85,30 @@ footer{
   color :#fff;
   font-family: 'Cormorant Garamond', serif;
 }
-.jumbotron{
-	background-color:#fff;
+.jumbotron {
+	margin-top: 8%;
+	background-color: #fff;
 }
 
 .jumbotron-heading {
-  color :#000;
-  font-family: 'Cormorant Garamond', serif;	
-  letter-spacing:6px;
-}
-h2{
+	color: #000;
 	font-family: 'Cormorant Garamond', serif;
-	margin:5%;
+	letter-spacing: 6px;
+}
+
+h3 {
+	font-family: 'Cormorant Garamond', serif;
+	margin: 5%;
+}
+
+h1 {
+	font-family: 'Cormorant Garamond', serif;
+	margin: 5%;
+}
+
+h5, h2, h4 {
+	font-family: 'Cormorant Garamond', serif;
+	margin: 5%;
 }
 .reg {
 	font-family: 'Cormorant Garamond', serif;

@@ -37,19 +37,19 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Home", "Index", "Home")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("Service", "Service", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Service", "Service", "Home")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("About", "About", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("About", "About", "Home")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("Gellary", "Gellary", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Gellary", "Index", "igms")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Contact", "Contact", "Home")
 						</li>
 
 					</ul>
@@ -75,7 +75,7 @@
 					<h2>SERVICES</h2>
 					<img src="~/Content/asset/icon3.png">
 					<h4>Turn your dream into a reality</h4>
-					<a href="service.html"><button class="btn">DISCOVER</button></a>
+					<button class="btn">@Html.ActionLink("Service", "Service", "Home")</button></a>
 				</div>
 				<div class="col-md-1"></div>
 				<div class="col-md-7">
@@ -94,7 +94,7 @@
 					<h2>GALLERY</h2>
 					<img src="~/Content/asset/icon3.png">
 					<h4>The Unforgettable Memories</h4>
-					<a href="gellary.php"><button class="btn">DISCOVER</button></a>
+					<button class="btn">@Html.ActionLink("Gellary", "Index", "igms")</button></a>
 				</div>
 			</div>
 			<hr class="featurette-divider">

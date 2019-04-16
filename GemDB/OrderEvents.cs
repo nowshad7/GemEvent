@@ -17,7 +17,9 @@ namespace GemDB
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public OrderEvents()
         {
-            this.OrganizeEvents = new HashSet<OrganizeEvents>();
+			var ensureDLLIsCopied =
+				System.Data.Entity.SqlServer.SqlProviderServices.Instance;
+			this.OrganizeEvents = new HashSet<OrganizeEvents>();
         }
     
         public int EventID { get; set; }

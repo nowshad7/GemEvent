@@ -36,19 +36,19 @@
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item ">
-							@Html.ActionLink("Home", "Index", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Home", "Index", "Home")
 						</li>
 						<li class="nav-item active">
-							@Html.ActionLink("Service", "Service", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Service", "Service", "Home")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("About", "About", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("About", "About", "Home")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("Gellary", "Gellary", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Gellary", "Index", "igms")
 						</li>
 						<li class="nav-item">
-							@Html.ActionLink("Contact", "Contact", "Home", new { @class = "nav-link" })
+							@Html.ActionLink("Contact", "Contact", "Home")
 						</li>
 
 					</ul>
@@ -165,7 +165,7 @@
 
 		<section class="jumbotron text-center">
 			<div class="container">
-				<a href="contact.php"><button class="btn">BOOK   A   CONSULTATION</button></a>
+				<button class="btn">@Html.ActionLink("BOOK A CONSULTATION", "Login", "Account")</button>
 
 			</div>
 		</section>

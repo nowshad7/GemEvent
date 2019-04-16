@@ -7,24 +7,8 @@
       display: table;
 	  background-attachment:fixed;
 }
-.btn {
-	padding: 4% 27%;
-	margin-top: 15%;
-	margin-bottom: 15%;
-	font-family: "Poppins";
-	font-weight: lighter;
-	font-size: 15px;
-	color: #fff;
-	transition: .3s;
-	background: rgba(0,0,0,0);
-	border: 1px solid #DAA520;
-}
 
-	.btn:hover {
-		transition: .3s;
-		background: #fff;
-		color: #DAA520;
-	}
+
 
 footer{
 	background:#996515;
@@ -44,6 +28,17 @@ footer{
 .follow i {
 	margin-left:1%;
 }
+.btn {
+	padding: 2% 5%;
+	font-family: 'Cormorant Garamond', serif;
+	font-size: 15px;
+	letter-spacing: 1px;
+	color: #fff;
+	transition: .3s;
+	background: #000;
+	border: 1px solid #DAA520;
+}
+
 
 
 
@@ -93,7 +88,7 @@ h1{
 	font-family: 'Cormorant Garamond', serif;
 	margin:5%;
 }
-h5{
+h5,h2,h4{
 	font-family: 'Cormorant Garamond', serif;
 	margin:5%;
 }
